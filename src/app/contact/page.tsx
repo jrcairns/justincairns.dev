@@ -16,7 +16,7 @@ export default function Contact() {
                     <li className="flex space-x-4 items-center w-full">
                         <Button asChild variant="secondary" className="h-auto w-full justify-center border flex items-center">
                             <a target="_blank" href={`${process.env.NEXT_PUBLIC_CALENDAR_URL}`} className="w-full space-x-2 flex items-center">
-                                <span className="font-medium">Book an intro call</span>
+                                <span>Book an intro call</span>
                                 <ExternalLink className="w-3 h-3" />
                             </a>
                         </Button>
@@ -24,7 +24,7 @@ export default function Contact() {
                     <li className="flex space-x-4 items-center w-full">
                         <Button asChild variant="secondary" className="h-auto w-full justify-center border flex items-center">
                             <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`} className="w-full space-x-2 flex items-center">
-                                <span className="font-medium">Send me an email</span>
+                                <span>Send me an email</span>
                                 <ExternalLink className="w-3 h-3" />
                             </a>
                         </Button>
