@@ -32,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(inter.className, "shadow-inner [--gradient-position:ellipse_at_top] sm:[--gradient-position:ellipse_at_center] bg-[radial-gradient(var(--gradient-position),_var(--tw-gradient-stops))] from-[#18181A] from-[15%] to-background text-sm antialiased sm:min-h-screen flex sm:items-center pt-6 sm:pt-0")}>
+    <html className="h-full" lang="en">
+      <body className={cn(inter.className, "h-full shadow-inner [--gradient-position:ellipse_at_top] sm:[--gradient-position:ellipse_at_center] bg-[radial-gradient(var(--gradient-position),_var(--tw-gradient-stops))] from-[#18181A] from-[15%] to-background text-sm antialiased flex sm:items-center pt-6 sm:pt-0")}>
         {children}
       </body>
     </html>
