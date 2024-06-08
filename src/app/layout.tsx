@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "shadow-inner [--gradient-position:ellipse_at_top] sm:[--gradient-position:ellipse_at_center] bg-[radial-gradient(var(--gradient-position),_var(--tw-gradient-stops))] from-[#18181A] from-[15%] to-background text-sm antialiased min-h-screen flex sm:items-center pt-6 sm:pt-0")}>
+      <body className={cn(inter.className, "shadow-inner [--gradient-position:ellipse_at_top] sm:[--gradient-position:ellipse_at_center] bg-[radial-gradient(var(--gradient-position),_var(--tw-gradient-stops))] from-[#18181A] from-[15%] to-background text-sm antialiased sm:min-h-screen flex sm:items-center pt-6 sm:pt-0")}>
         {children}
       </body>
     </html>
