@@ -4,6 +4,9 @@ import { Analytics } from "@vercel/analytics/react"
 
 import { cn } from "@/lib/utils";
 import "./globals.css";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +40,12 @@ export default function RootLayout({
     <html className="h-full" lang="en">
       <body className={cn(inter.className, "h-full shadow-inner [--gradient-position:ellipse_at_top] sm:[--gradient-position:ellipse_at_center] bg-[radial-gradient(var(--gradient-position),_var(--tw-gradient-stops))] from-[#18181A] from-[5%] to-background text-sm antialiased flex sm:items-center pt-6 sm:pt-0")}>
         {children}
+        <div className="absolute bottom-4 right-4">
+          <Link className={cn(buttonVariants({ variant: "outline" }), "space-x-2 items-center")} target="_blank" href="https://github.com/jrcairns/justincairns.dev">
+            <span>view code</span>
+            <ExternalLink className="w-3 h-3" />
+          </Link>
+        </div>
         <Analytics />
       </body>
     </html>
