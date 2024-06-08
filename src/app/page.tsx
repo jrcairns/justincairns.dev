@@ -57,7 +57,7 @@ export default function Home() {
 
                   <div className="flex justify-between items-end flex-1">
                     <div className="space-y-1">
-                      <h3 className="font-medium">{job.company}</h3>
+                      <p className="font-medium">{job.company}</p>
                       <p className="text-muted-foreground text-xs">{job.title}</p>
                     </div>
                     <p className="text-muted-foreground text-xs">{job.startDate} - {job.endDate}</p>
