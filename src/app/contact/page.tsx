@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Contact() {
     return (
-        <div className="max-w-xs w-full mx-auto lg:rounded-xl flex flex-col">
+        <div className="sm:max-w-xs w-full mx-auto lg:rounded-xl flex flex-col">
             <div className="flex">
                 <Link href="/" className="flex items-baseline space-x-2 text-muted-foreground hover:text-foreground transition-colors">
                     <span className="text-xl leading-none">&larr;</span>
