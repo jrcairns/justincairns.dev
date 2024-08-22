@@ -21,7 +21,7 @@ export default function Home() {
       <main className="mt-4">
         <div className="px-4 space-y-6">
           <div className="flex-1 grid gap-6 text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-balance bg-gradient-to-br from-foreground from-30% to-foreground/60 bg-clip-text text-transparent pb-2">Software engineer, product designer.</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-balance pb-2"><span className="opacity-50">Product</span> <span className="bg-gradient-to-br from-foreground from-30% to-foreground/60 bg-clip-text text-transparent">design</span><span className="opacity-50">er,</span> <span className="opacity-50">software</span> <span className="bg-gradient-to-br from-foreground from-30% to-foreground/60 bg-clip-text text-transparent">engineer</span><span className="opacity-50">.</span></h1>
             <p className="text-muted-foreground text-base text-balance -mt-2">Currently working with <span className="text-foreground/80">Typescript</span>, <span className="text-foreground/80">Next.js</span>, <span className="text-foreground/80">Laravel</span>, <span className="text-foreground/80">Inertia</span>, <span className="text-foreground/80">Framer Motion</span>, and <span className="text-foreground/80">TailwindCSS</span>.</p>
             <ul className="flex space-x-6 justify-center">
               <li>
@@ -65,14 +65,6 @@ export default function Home() {
                 </li>
               ))}
             </ol>
-            <div className="mt-6">
-              <Button asChild variant="secondary">
-                <a href="/Justin_Cairns_2024.pdf" target="_blank" download className="w-full space-x-2 flex items-center">
-                  <span>Download Resume</span>
-                  <DownloadIcon className="w-3 h-3" />
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </main >
