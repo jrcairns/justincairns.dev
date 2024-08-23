@@ -17,10 +17,10 @@ const font = Titillium_Web({ subsets: ["latin"], weight: ["400", "600"], variabl
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.justincairns.dev'),
   title: "Justin Cairns - Design Engineer - Frontend Engineer",
-  description: "Frontend engineer occasionally writing about Typescript, React, Next.js, Tailwind, and all things Vercel.",
+  description: "Design engineer occasionally writing about the frontend ecosystem.",
   openGraph: {
     title: 'justincairns.dev - Design Engineer - Frontend Engineer',
-    description: 'Design engineer occasionally writing about Typescript, React, Next.js, Tailwind, and all things Vercel.',
+    description: 'Design engineer occasionally writing about the frontend ecosystem.',
     url: 'https://www.justincairns.dev',
     siteName: 'justincairns.dev',
     // images: [

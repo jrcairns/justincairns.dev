@@ -45,11 +45,12 @@ export default function Home() {
           <DialogTrigger asChild>
             <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super">Let&apos;s talk</Button>
           </DialogTrigger>
-          <DialogContent className="bg-muted/80 backdrop-blur-xl duration-0 translate-x-0 translate-y-0 top-0 left-0 h-full w-full max-w-none sm:rounded-none flex items-center justify-center">
+          <DialogContent className="bg-muted/80 border-none backdrop-blur-xl duration-0 translate-x-0 translate-y-0 top-0 left-0 h-full w-full max-w-none sm:rounded-none flex items-center justify-center">
+            <svg className="absolute top-0 left-0" width="100%" height="24px" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-75" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[#a6a6a6]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[#a6a6a6]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-75)"></rect></svg>
             <div className="max-w-xs w-full">
               <div>
                 <p className="font-semibold mb-1">Send me a message</p>
-                <p className="mb-4 text-muted-foreground">Leave your information below, and I&apos;ll follow up shortly. Reach out directly on <a href="https://www.linkedin.com/in/justin-cairns-9ba580177/" target="_blank" className="underline">Linkedin</a> or <a href="https://x.com/_justincairns" target="_blank" className="underline">X</a> for a quicker response.</p>
+                <p className="mb-4 text-muted-foreground">Leave your information below, and I&apos;ll follow up shortly. Reach out directly on <a className="inline-flex underline hover:text-foreground transition-colors" href="https://www.linkedin.com/in/justin-cairns-9ba580177/" target="_blank">Linkedin <ExternalLink className="h-3 w-3 ml-px" /></a> or <a href="https://x.com/_justincairns" target="_blank" className="inline-flex underline hover:text-foreground transition-colors">X <ExternalLink className="ml-px h-3 w-3" /></a> for a quicker response.</p>
                 <ul className="pl-3.5 mb-4 list-disc text-muted-foreground space-y-2 text-sm">
                   <li>Full-time & contract positions</li>
                   <li>Short-term freelance <div className="text-xs text-muted-foreground inline text-nowrap truncate bg-border/50 border px-1.5 py-0.5 leading-none rounded-[8px] md:rounded-[10px]">40hr+</div></li>
