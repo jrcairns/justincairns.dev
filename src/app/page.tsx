@@ -1,16 +1,27 @@
 
+import { CloudflareWorkersIcon } from "@/components/icons/cfw";
+import { LaravelIcon } from "@/components/icons/laravel";
+import { NextJsIcon } from "@/components/icons/nextjs";
+import { PostgresIcon } from "@/components/icons/postgres";
+import { RadixIcon } from "@/components/icons/radix";
+import { ReactIcon } from "@/components/icons/react";
+import { ShadcnIcon } from "@/components/icons/shadcn";
+import { SupabaseIcon } from "@/components/icons/supabase";
+import { TailwindIcon } from "@/components/icons/tailwind";
+import { VercelIcon } from "@/components/icons/vercel";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogClose, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 import { ComponentProps, PropsWithChildren } from "react";
 
 function Line({ className, children, ...rest }: PropsWithChildren<ComponentProps<"div">>) {
   return (
-    <div className={cn("absolute top-0 h-full w-2 left-1 md:-left-6", className)} {...rest}>
-      <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">{children}</div>
-      <svg className="absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path><line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
+    <div className={cn("absolute top-0 h-full w-2 left-1 md:-left-6 text-[#afafaf]", className)} {...rest}>
+      <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] font-mono">{children}</div>
+      <svg className="absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4L4 1L7 4" className="stroke-current" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path><line x1="4" y1="1" x2="4" y2="100%" className="stroke-current" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
       </svg>
-      <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L4 4L7 1" className="stroke-current" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
     </div>
   )
@@ -30,7 +41,48 @@ export default function Home() {
             </div>
           </div>
         </span>
-        <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:Ra5f6la:" data-state="closed">Let&apos;s talk</Button>
+        <Dialog >
+          <DialogTrigger asChild>
+            <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super">Let&apos;s talk</Button>
+          </DialogTrigger>
+          <DialogContent className="bg-muted/80 backdrop-blur-xl duration-0 translate-x-0 translate-y-0 top-0 left-0 h-full w-full max-w-none sm:rounded-none flex items-center justify-center">
+            <div className="max-w-xs w-full">
+              <div>
+                <p className="font-semibold mb-1">Send me a message</p>
+                <p className="mb-4 text-muted-foreground">Leave your information below, and I'll follow up shortly. Reach out directly on <a href="https://www.linkedin.com/in/justin-cairns-9ba580177/" target="_blank" className="underline">Linkedin</a> or <a href="https://x.com/_justincairns" target="_blank" className="underline">X</a> for a quicker response.</p>
+                <ul className="pl-3.5 mb-4 list-disc text-muted-foreground space-y-2 text-sm">
+                  <li>Full-time & contract positions</li>
+                  <li>Short-term freelance <div className="text-xs text-muted-foreground inline text-nowrap truncate bg-border/50 border px-1.5 py-0.5 leading-none rounded-[8px] md:rounded-[10px]">40hr+</div></li>
+                  <li>React architecture consultation <div className="text-xs text-muted-foreground inline text-nowrap truncate bg-border/50 border px-1.5 py-0.5 leading-none rounded-[8px] md:rounded-[10px]">12hr+</div></li>
+                </ul>
+                <form>
+                  <input required id="name" type="text" placeholder="Name" className="mb-2 bg-background border w-full h-10 px-4 py-2 text-sm md:text-base rounded focus:outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground/50" name="name" />
+                  <input required id="email" type="email" placeholder="Email" className="mb-2 bg-background border w-full h-10 px-4 py-2 text-sm md:text-base rounded focus:outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground/50" name="email" />
+                  <input id="link" type="text" placeholder="Link to job post (optional)" className="bg-background border w-full h-10 px-4 py-2 text-sm md:text-base rounded focus:outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground/50" name="link" />
+                  <div className="flex mt-4 space-x-2 justify-end">
+                    <DialogClose className="rounded px-3 py-2 inline-block text-xs md:text-sm text-muted-foreground/50 hover:text-muted-foreground focus:text-muted-foreground transition-colors focus:outline-none focus:ring-1 focus:ring-foreground">Cancel</DialogClose>
+                    <Button type="button" className="relative z-10 inline-block px-3 py-2 border rounded text-xs md:text-sm shadow-super">Send</Button>
+                  </div>
+                </form>
+              </div>
+
+              <div className="mt-6">
+                <p className="text-muted-foreground/50 font-mono text-xs">Currently working with, but not limited to:</p>
+                <div className="grid grid-cols-9 gap-1.5 items-center mt-2">
+                  <ReactIcon className="w-6" />
+                  <NextJsIcon className="w-6" />
+                  <TailwindIcon className="w-6" />
+                  <RadixIcon className="w-6" />
+                  <PostgresIcon className="w-6" />
+                  <LaravelIcon className="w-6" />
+                  <VercelIcon className="w-6" />
+                  <SupabaseIcon className="w-6" />
+                  <CloudflareWorkersIcon className="w-6" />
+                </div>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
         <Line>HDR</Line>
       </header>
 
@@ -230,7 +282,7 @@ export default function Home() {
                     <div className="text-foreground/50">Dolor sit.</div>
                   </div>
                   <div className="ml-auto mr-2">
-                    <div className="relative h-6 w-6">
+                    <div className="relativ6 w-6">
                       <img src="https://pssbvzyatajutwslvzgk.supabase.co/storage/v1/object/public/logos/vercel.svg" alt="" className="absolute top-0 left blur-lg opacity-50" />
                       <img src="https://pssbvzyatajutwslvzgk.supabase.co/storage/v1/object/public/logos/vercel.svg" alt="" className="absolute top-0 left-0" />
                     </div>
@@ -303,7 +355,7 @@ export default function Home() {
         <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 items-center justify-between mt-8 mb-20">
           <div className="text-sm md:text-base text-foreground">© Copyright</div>
           <div className="flex gap-1 mt-1 text-muted-foreground">
-            <div className="text-xs md:text-sm bg-muted border px-2 pt-[3px] pb-[2px] md:py-[2px] leading-none rounded-[8px] md:rounded-[10px]">2024</div>
+            <div className="text-xs md:text-sm bg-muted border px-2 pt-[3px] pb-[2px] md:py-[2px] leading-none rounded-[8px] md:rounded-[10px]">{new Date().getFullYear()}</div>
           </div>
           <Line className="left-1 md:-left-6">COP</Line>
         </div>
@@ -320,7 +372,7 @@ export default function Home() {
 
       <form className="fixed bottom-2 md:bottom-5 flex justify-center w-full z-30">
         <label className="bg-background/80 backdrop-blur-md rounded relative w-full mx-2 md:w-[620px] animate-wipe-up" htmlFor="subscribe">
-          <div className="absolute w-full h-full rounded shadow-email animate-delay-opacity"></div>
+          <div className="absolute w-full h-full rounded shadow-email animate-delay-opacity pointer-events-none"></div>
           <input id="subscribe" type="email" placeholder="justin@example.com" className="bg-transparent border w-full h-14 px-6 py-2 text-sm md:text-base rounded focus:outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground/50" name="subscribe" />
           <Button className="absolute top-1/2 right-2 -translate-y-1/2 border shadow-super">
             Subscribe
