@@ -1,6 +1,20 @@
 
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
+import { ComponentProps, PropsWithChildren } from "react";
+
+function Line({ className, children, ...rest }: PropsWithChildren<ComponentProps<"div">>) {
+  return (
+    <div className={cn("absolute top-0 h-full w-2 left-1 md:-left-6", className)} {...rest}>
+      <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">{children}</div>
+      <svg className="absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path><line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
+      </svg>
+      <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+  )
+}
 
 export default function Home() {
   return (
@@ -17,10 +31,7 @@ export default function Home() {
           </div>
         </span>
         <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:Ra5f6la:" data-state="closed">Let&apos;s talk</Button>
-        <div className="absolute top-0 h-full w-2 left-1 md:-left-6">
-          <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">HDR</div>
-          <svg className="absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path><line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line></svg><svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        </div>
+        <Line>HDR</Line>
       </header>
 
       <div className="max-w-[600px] mx-auto text-[8px] text-foreground">
@@ -137,17 +148,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <div className="absolute top-0 h-full w-2 left-5 md:-left-8">
-              <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">HRO</div>
-              <svg className="absolute -top-[1px] -left-[3.5px] overflow-visible" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                <line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
-              </svg>
-              <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </div>
+            <Line className="left-5 md:-left-8">HRO</Line>
           </div>
         </div>
       </div>
@@ -163,7 +164,7 @@ export default function Home() {
               <div className="w-[70px] h-[70px] bg-background rounded-[1px] shadow-logo flex items-center justify-center">
                 <div className="relative w-6 h-6">
                   {job.bg}
-                  <img src={job.logoUrl} className="relative md:group-hover:scale-105 transition-transform duration-300 delay-75 dark:hidden text-transparent" alt="BetterHelp logo" />
+                  <img src={job.logoUrl} className="rounded-sm relative md:group-hover:scale-105 transition-transform duration-300 delay-75 dark:hidden text-transparent" alt="BetterHelp logo" />
                 </div>
               </div>
               <div className="relative">
@@ -179,7 +180,7 @@ export default function Home() {
                 <div className="md:flex items-center justify-between">
                   <span className="text-xs block md:text-sm text-foreground/75">{job.title}</span>
                   <div className="relative flex gap-1 mt-[3px] -ml-1 md:group-hover:-translate-x-[50px] transition-transform duration-300 delay-75">
-                    <div className="text-xs max-w-[7.5rem] md:max-w-full text-nowrap truncate bg-border/50 border px-2 py-1 leading-none rounded-[8px] md:rounded-[10px]">{job.location}</div>
+                    <div className="text-xs text-muted-foreground max-w-[7.5rem] md:max-w-full text-nowrap truncate bg-border/50 border px-2 py-1 leading-none rounded-[8px] md:rounded-[10px]">{job.location}</div>
                   </div>
                 </div>
                 <div className="absolute -right-[55px] top-1/2 group -translate-y-1/2 flex items-center justify-center text-muted-foreground hover:text-foreground bg-muted h-9 w-9 rounded-full border rotate-90 md:group-hover:-translate-x-[55px] md:group-hover:rotate-0 transition-transform duration-300 delay-75 ">
@@ -191,32 +192,14 @@ export default function Home() {
             </a>
           ))}
         </div>
-        <div className="absolute top-0 h-full w-2 left-1 md:-left-6">
-          <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">HST</div>
-          <svg className="absolute -top-[1px] -left-[3.5px] overflow-visible" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
-          </svg>
-          <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
+        <Line className="left-1 md:-left-6">HST</Line>
       </div>
 
       <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0">
         <h2 className="text-2xl mb-4">About me</h2>
         <p className="mb-4 leading-7 text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem officia mollitia maiores hic sit, eum ratione quod. Impedit, illo fuga sunt labore expedita ut! Eaque, aliquam accusantium odit aperiam minus sunt nesciunt? Vero ullam, sequi accusantium aliquid doloribus architecto.</p>
         <p className="mb-4 leading-7 text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum saepe vero consequatur odio eos qui possimus nesciunt quas expedita voluptas?</p>
-        <div className="absolute top-0 h-full w-2 left-1 md:-left-6">
-          <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">CON</div>
-          <svg className="overflow-visible absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
-          </svg>
-          <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
+        <Line className="left-1 md:-left-6">CON</Line>
       </div>
 
       <div className="relative max-w-[600px] md:mx-auto -mt-8 -mb-4 pl-10 pr-4 md:px-0 ">
@@ -256,16 +239,7 @@ export default function Home() {
               </div>
             </blockquote>
           </a>
-          <div className="absolute top-0 h-full w-2 left-5 md:-left-8">
-            <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">QUT</div>
-            <svg className="overflow-visible absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
-            </svg>
-            <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
+          <Line className="left-5 md:-left-8">QUT</Line>
         </div>
       </div>
 
@@ -277,16 +251,7 @@ export default function Home() {
           <p className="mb-4 leading-7">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ipsam tempora deleniti corporis ratione itaque non deserunt. Rerum.</p>
           <p className="mb-4 leading-7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio esse vitae non. Id sequi aperiam temporibus cum error quae inventore reprehenderit hic beatae doloremque, alias soluta nostrum, expedita nam labore. Temporibus mollitia dolore corporis!</p>
         </div>
-        <div className="absolute top-0 h-full w-2 left-1 md:-left-6">
-          <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">LIN</div>
-          <svg className="overflow-visible absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
-          </svg>
-          <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
+        <Line className="left-1 md:-left-6">LIN</Line>
       </div>
 
       <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 mb-20">
@@ -317,16 +282,7 @@ export default function Home() {
             </a>
           </li>
         </ul>
-        <div className="absolute top-0 h-full w-2 left-1 md:-left-6">
-          <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">CON</div>
-          <svg className="overflow-visible absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
-          </svg>
-          <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
+        <Line className="left-1 md:-left-6">CON</Line>
       </div>
 
       <footer>
@@ -342,32 +298,14 @@ export default function Home() {
             </span>
             <p className="mt-2 text-muted-foreground max-w-80">Design engineer</p>
           </div>
-          <div className="absolute top-0 h-full w-2 left-1 md:-left-6">
-            <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">FOT</div>
-            <svg className="overflow-visible absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
-            </svg>
-            <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
+          <Line className="left-1 md:-left-6">FOT</Line>
         </div>
         <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 items-center justify-between mt-8 mb-20">
           <div className="text-sm md:text-base text-foreground">© Copyright</div>
           <div className="flex gap-1 mt-1 text-muted-foreground">
             <div className="text-xs md:text-sm bg-muted border px-2 pt-[3px] pb-[2px] md:py-[2px] leading-none rounded-[8px] md:rounded-[10px]">2024</div>
           </div>
-          <div className="absolute top-0 h-full w-2 left-1 md:-left-6">
-            <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] text-[#a6a6a6] font-mono">COP</div>
-            <svg className="overflow-visible absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 4L4 1L7 4" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <line x1="4" y1="1" x2="4" y2="100%" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
-            </svg>
-            <svg className="absolute -bottom-[1px] -left-[3.5px]" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L4 4L7 1" className="stroke-[#a6a6a6]" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
+          <Line className="left-1 md:-left-6">COP</Line>
         </div>
         <div className="flex h-24">
           <div className="w-1/2 opacity-50">
