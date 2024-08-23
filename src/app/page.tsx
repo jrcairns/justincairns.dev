@@ -251,7 +251,7 @@ export default function Home() {
         <h2 className="text-2xl mb-4">About me</h2>
         <p className="mb-4 leading-7 text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem officia mollitia maiores hic sit, eum ratione quod. Impedit, illo fuga sunt labore expedita ut! Eaque, aliquam accusantium odit aperiam minus sunt nesciunt? Vero ullam, sequi accusantium aliquid doloribus architecto.</p>
         <p className="mb-4 leading-7 text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum saepe vero consequatur odio eos qui possimus nesciunt quas expedita voluptas?</p>
-        <Line className="left-1 md:-left-6">CON</Line>
+        <Line className="left-1 md:-left-6">ABT</Line>
       </div>
 
       <div className="relative max-w-[600px] md:mx-auto -mt-8 -mb-4 pl-10 pr-4 md:px-0 ">
@@ -291,7 +291,7 @@ export default function Home() {
               </div>
             </blockquote>
           </a>
-          <Line className="left-5 md:-left-8">QUT</Line>
+          <Line className="left-5 md:-left-8">REC</Line>
         </div>
       </div>
 
@@ -303,7 +303,7 @@ export default function Home() {
           <p className="mb-4 leading-7">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ipsam tempora deleniti corporis ratione itaque non deserunt. Rerum.</p>
           <p className="mb-4 leading-7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio esse vitae non. Id sequi aperiam temporibus cum error quae inventore reprehenderit hic beatae doloremque, alias soluta nostrum, expedita nam labore. Temporibus mollitia dolore corporis!</p>
         </div>
-        <Line className="left-1 md:-left-6">LIN</Line>
+        <Line className="left-1 md:-left-6">WRI</Line>
       </div>
 
       <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 mb-20">
