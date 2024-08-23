@@ -82,9 +82,37 @@ export default function Home() {
               </div>
               <div className="absolute z-20 top-1/2 left-1/2 transform -translate-x-[68px] md:-translate-x-[88px] -translate-y-1/2 h-[110px] w-[110px] flex items-center justify-center">
                 <div className="absolute top-0 left-0 h-full w-full bg-background rounded-full animate-scale-slow"></div>
-                {/* <div className="absolute top-full left-1/2 -translate-x-1/2 translate-y-1 h-4 w-[1px] animate-opacity-in">
+                <div className="absolute top-2 animate-opacity-in">
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2" style={{ maskImage: "url(#hexmask)" }}>
+                    <svg className="none" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="hexmask">
+                        <path d="M7 1L13 4.88889L13 11.1111L7 15L1 11.1111L1 4.88889L7 1Z" stroke="#FFF" stroke-width="0.5"></path>
+                      </mask>
+                    </svg>
+                    <div className="absolute top-0 left-0 w-full h-full bg-conic animate-sprite-rotate [--border-angle:0turn]"></div>
+                  </div>
+                  <div className="absolute top-[15px] left-1/2 -translate-x-1/2" style={{ maskImage: "url(#hexmask2)" }}>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="hexmask2">
+                        <path d="M5 0.5L9 3L9 7L5 9.5L1 7L1 3L5 0.5Z" stroke="#FFF" stroke-width="0.5"></path>
+                      </mask>
+                    </svg>
+                    <div className="absolute top-0 left-0 w-full h-full bg-conic animate-sprite-rotate [--border-angle:0turn] [animation-delay:300ms]"></div>
+                  </div>
+                  <div className="absolute top-[17px] left-1/2 -translate-x-1/2" style={{ maskImage: "url(#hexmask3)" }}>
+                    <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="hexmask3">
+                        <path d="M3 1L5 2.11111L5 3.88889L3 5L1 3.88889L1 2.11111L3 1Z" stroke="#FFF" stroke-width="0.5"></path>
+                      </mask>
+                    </svg>
+                    <div className="absolute top-0 left-0 w-full h-full bg-conic animate-sprite-rotate [--border-angle:0turn] [animation-delay:600ms]"></div>
+                  </div>
+                </div>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 translate-y-1 h-4 w-[1px] animate-opacity-in">
                   <div className="absolute top-0 left-0 h-full w-full bg-[#bfbfbf]"></div>
-                </div> */}
+                </div>
+                {/* <div className="relative z-10 -left-1 flex animate-opacity-in font-mono text-[#a6a6a6]">next.js</div> */}
+                {/* <div className="relative z-10 -left-1 top-4 flex animate-opacity-in font-mono text-[#a6a6a6]">react.js</div> */}
               </div>
               <div className="absolute top-1/2 left-1/3 md:left-1/2 transform -translate-y-1/2 h-[330px] w-[330px] flex items-center justify-center">
                 <div className="absolute top-0 left-0 h-full w-full bg-[#F2F2F2] rounded-full animate-wipe -rotate-45"></div>

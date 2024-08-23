@@ -120,9 +120,12 @@ const config = {
           "50%": { opacity: "0", transform: "scale(2)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
-        'spin-reverse': {
+        "spin-reverse": {
           '100%': { '--border-angle': '1turn' },
-        }
+        },
+        "sprite-rotate": {
+          '100%': { '--border-angle': '1turn' },
+        },
       },
       animation: {
         "blink": "blink 6s linear infinite",
@@ -137,6 +140,7 @@ const config = {
         "delay-opacity": "delay-opacity 2.5s linear",
         "count": "count 12s linear infinite",
         "scale-down": "scale-down 1.5s linear",
+        "sprite-rotate": "sprite-rotate 5s linear infinite"
       },
     },
   },
