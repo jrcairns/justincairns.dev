@@ -131,7 +131,7 @@ export default function Home() {
       <div className="relative ml-6 max-w-[600px] md:mx-auto mb-24 px-4 md:px-0 z-30 mt-2">
         <div className="space-y-2">
           {jobs.map(job => (
-            <a key={job.company} href="/" target="_blank" className="group grid grid-cols-[70px_1fr] items-center gap-4 w-full px-4 py-3 mb-2 border rounded focus:outline-none bg-background overflow-hidden">
+            <a key={job.company} href={job.url} target="_blank" className="group grid grid-cols-[70px_1fr] items-center gap-4 w-full px-4 py-3 mb-2 border rounded focus:outline-none bg-background overflow-hidden">
               <div className="w-[70px] h-[70px] bg-background rounded-[1px] shadow-logo flex items-center justify-center">
                 <div className="relative w-6 h-6">
                   {job.bg}
@@ -374,6 +374,7 @@ const jobs = [
     startDate: "2022",
     endDate: "Present",
     logoUrl: "/bh.jpeg",
+    url: "https://betterhelp.com",
     bg: (<img className="absolute top-0 left-0 blur-lg opacity-25 md:group-hover:opacity-75 transition-opacity text-transparent" src="/bh.jpeg" />)
   },
   {
@@ -383,6 +384,7 @@ const jobs = [
     startDate: "2021",
     endDate: "2022",
     logoUrl: "/coinsmart.jpeg",
+    url: "https://coinsmart.com",
     bg: (<div className="absolute top-0 left-0 blur-lg opacity-25 md:group-hover:opacity-75 transition-opacity text-transparent bg-gradient-to-bl from-[#E35D6D] to-[#6244EA] w-6 h-6" />)
   },
   {
@@ -392,6 +394,7 @@ const jobs = [
     startDate: "2019",
     endDate: "2021",
     logoUrl: "/afterdigital.jpeg",
+    url: "https://afterdigital.co.uk",
     bg: (<img className="absolute top-0 left-0 blur-lg opacity-25 md:group-hover:opacity-75 transition-opacity text-transparent" src="/afterdigital.jpeg" />)
   },
 ]
