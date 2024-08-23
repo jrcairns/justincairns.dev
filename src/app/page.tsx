@@ -49,7 +49,7 @@ export default function Home() {
             <div className="max-w-xs w-full">
               <div>
                 <p className="font-semibold mb-1">Send me a message</p>
-                <p className="mb-4 text-muted-foreground">Leave your information below, and I'll follow up shortly. Reach out directly on <a href="https://www.linkedin.com/in/justin-cairns-9ba580177/" target="_blank" className="underline">Linkedin</a> or <a href="https://x.com/_justincairns" target="_blank" className="underline">X</a> for a quicker response.</p>
+                <p className="mb-4 text-muted-foreground">Leave your information below, and I&apos;ll follow up shortly. Reach out directly on <a href="https://www.linkedin.com/in/justin-cairns-9ba580177/" target="_blank" className="underline">Linkedin</a> or <a href="https://x.com/_justincairns" target="_blank" className="underline">X</a> for a quicker response.</p>
                 <ul className="pl-3.5 mb-4 list-disc text-muted-foreground space-y-2 text-sm">
                   <li>Full-time & contract positions</li>
                   <li>Short-term freelance <div className="text-xs text-muted-foreground inline text-nowrap truncate bg-border/50 border px-1.5 py-0.5 leading-none rounded-[8px] md:rounded-[10px]">40hr+</div></li>
