@@ -282,7 +282,7 @@ export default function Home() {
                     <div className="text-foreground/50">Dolor sit.</div>
                   </div>
                   <div className="ml-auto mr-2">
-                    <div className="relativ6 w-6">
+                    <div className="relative h-6 w-6">
                       <img src="https://pssbvzyatajutwslvzgk.supabase.co/storage/v1/object/public/logos/vercel.svg" alt="" className="absolute top-0 left blur-lg opacity-50" />
                       <img src="https://pssbvzyatajutwslvzgk.supabase.co/storage/v1/object/public/logos/vercel.svg" alt="" className="absolute top-0 left-0" />
                     </div>
