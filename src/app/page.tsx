@@ -266,7 +266,7 @@ export default function Home() {
                 <p className="relative text-lg mb-3 [font-family:var(--font-heading)]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, id?</p>
                 <p className="relative text-lg mb-4 [font-family:var(--font-heading)]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut laudantium inventore repudiandae odit minus placeat explicabo.</p>
                 <footer className="flex items-center gap-3 text-sm mt-10">
-                  <img src="https://designengineer.io/_next/image?url=https%3A%2F%2Fpssbvzyatajutwslvzgk.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fmedia%2Fguillermo-rauch-vercel.jpeg&w=96&q=75" alt="" className="w-10 h-10 rounded-full" />
+                  <img src="/1611002298561.jpeg" alt="" className="w-10 h-10 rounded-full" />
                   <div>
                     <div className="mr-2 text-foreground/80">Lorem, ipsum.</div>
                     <div className="text-foreground/50">Dolor sit.</div>
