@@ -1,23 +1,24 @@
 
+// http://localhost:3000/
 import { CloudflareWorkersIcon } from "@/components/icons/cfw";
 import { LaravelIcon } from "@/components/icons/laravel";
 import { NextJsIcon } from "@/components/icons/nextjs";
 import { PostgresIcon } from "@/components/icons/postgres";
 import { RadixIcon } from "@/components/icons/radix";
 import { ReactIcon } from "@/components/icons/react";
-import { ShadcnIcon } from "@/components/icons/shadcn";
 import { SupabaseIcon } from "@/components/icons/supabase";
 import { TailwindIcon } from "@/components/icons/tailwind";
 import { VercelIcon } from "@/components/icons/vercel";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogClose, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 import { ComponentProps, PropsWithChildren } from "react";
+import { ContactForm } from '@/components/contact-form';
 
 function Line({ className, children, ...rest }: PropsWithChildren<ComponentProps<"div">>) {
   return (
-    <div className={cn("absolute top-0 h-full w-2 left-1 md:-left-6 text-[#afafaf]", className)} {...rest}>
+    <div className={cn("absolute top-0 h-full w-2 left-1 md:-left-6 text-[--muted-color]", className)} {...rest}>
       <div className="absolute top-1/2 -left-1 origin-bottom-left -rotate-90 -translate-y-1/2 text-[8px] font-mono">{children}</div>
       <svg className="absolute -top-[1px] -left-[3.5px]" width="8" height="100%" viewBox="0 0 8 100%" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4L4 1L7 4" className="stroke-current" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></path><line x1="4" y1="1" x2="4" y2="100%" className="stroke-current" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
       </svg>
@@ -29,8 +30,14 @@ function Line({ className, children, ...rest }: PropsWithChildren<ComponentProps
 
 export default function Home() {
   return (
-    <div>
-      <svg width="100%" height="24px" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-75" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[#a6a6a6]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[#a6a6a6]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-75)"></rect></svg>
+    <div style={{
+      // @ts-ignore
+      "--muted-color": "#afafaf",
+      "--pattern-color": "#a6a6a6",
+      "--gray-75": "#bfbfbf",
+      "--gray-0": "#F2F2F2"
+    }}>
+      <svg width="100%" height="24px" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-75" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[--pattern-color]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[--pattern-color]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-75)"></rect></svg>
 
       <header className="relative ml-6 max-w-[600px] md:mx-auto px-4 md:px-0 flex items-center justify-between mt-12">
         <span className="block [font-family:var(--font-heading)]">
@@ -41,32 +48,14 @@ export default function Home() {
             </div>
           </div>
         </span>
-        <Dialog >
+        <Dialog>
           <DialogTrigger asChild>
             <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super">Let&apos;s talk</Button>
           </DialogTrigger>
           <DialogContent className="bg-muted/80 border-none backdrop-blur-xl duration-0 translate-x-0 translate-y-0 top-0 left-0 h-full w-full max-w-none sm:rounded-none flex items-center justify-center">
-            <svg className="absolute top-0 left-0" width="100%" height="24px" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-75" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[#a6a6a6]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[#a6a6a6]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-75)"></rect></svg>
+            <svg className="absolute top-0 left-0" width="100%" height="24px" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-75" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[--pattern-color]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[--pattern-color]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-75)"></rect></svg>
             <div className="max-w-xs w-full">
-              <div>
-                <p className="font-semibold mb-1">Send me a message</p>
-                <p className="mb-4 text-muted-foreground">Leave your information below, and I&apos;ll follow up shortly. Reach out directly on <a className="inline-flex underline hover:text-foreground transition-colors" href="https://www.linkedin.com/in/justin-cairns-9ba580177/" target="_blank">Linkedin <ExternalLink className="h-3 w-3 ml-px" /></a> or <a href="https://x.com/_justincairns" target="_blank" className="inline-flex underline hover:text-foreground transition-colors">X <ExternalLink className="ml-px h-3 w-3" /></a> for a quicker response.</p>
-                <ul className="pl-3.5 mb-4 list-disc text-muted-foreground space-y-2 text-sm">
-                  <li>Full-time & contract positions</li>
-                  <li>Short-term freelance <div className="text-xs text-muted-foreground inline text-nowrap truncate bg-border/50 border px-1.5 py-0.5 leading-none rounded-[8px] md:rounded-[10px]">40hr+</div></li>
-                  <li>React architecture consultation <div className="text-xs text-muted-foreground inline text-nowrap truncate bg-border/50 border px-1.5 py-0.5 leading-none rounded-[8px] md:rounded-[10px]">12hr+</div></li>
-                </ul>
-                <form>
-                  <input required id="name" type="text" placeholder="Name" className="mb-2 bg-background border w-full h-10 px-4 py-2 text-sm md:text-base rounded focus:outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground/50" name="name" />
-                  <input required id="email" type="email" placeholder="Email" className="mb-2 bg-background border w-full h-10 px-4 py-2 text-sm md:text-base rounded focus:outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground/50" name="email" />
-                  <input id="link" type="text" placeholder="Link to job post (optional)" className="bg-background border w-full h-10 px-4 py-2 text-sm md:text-base rounded focus:outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground/50" name="link" />
-                  <div className="flex mt-4 space-x-2 justify-end">
-                    <DialogClose className="rounded px-3 py-2 inline-block text-xs md:text-sm text-muted-foreground/50 hover:text-muted-foreground focus:text-muted-foreground transition-colors focus:outline-none focus:ring-1 focus:ring-foreground">Cancel</DialogClose>
-                    <Button type="button" className="relative z-10 inline-block px-3 py-2 border rounded text-xs md:text-sm shadow-super">Send</Button>
-                  </div>
-                </form>
-              </div>
-
+              <ContactForm />
               <div className="mt-6">
                 <p className="text-muted-foreground/50 font-mono text-xs">Currently working with, but not limited to:</p>
                 <div className="grid grid-cols-9 gap-1.5 items-center mt-2">
@@ -135,7 +124,7 @@ export default function Home() {
                 </div>
                 <div className="absolute top-0 left-0 h-full w-full bg-muted rounded-full animate-scale-slow"></div>
                 <div className="relative z-10 -left-6 animate-opacity-in">
-                  <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-[#F2F2F2] p-1 flex gap-[2px]">
+                  <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-[--gray-0] p-1 flex gap-[2px]">
                     <div className="w-[2px] h-[2px] bg-foreground rounded-full animate-blink opacity-10"></div>
                     <div className="w-[2px] h-[2px] bg-foreground rounded-full animate-blink opacity-10" style={{ animationDelay: "1s" }}></div>
                     <div className="w-[2px] h-[2px] bg-foreground rounded-full animate-blink opacity-10" style={{ animationDelay: "2s" }}></div>
