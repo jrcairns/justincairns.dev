@@ -5,6 +5,7 @@ import { submitContactForm } from '@/app/actions/contact';
 import { SubmitButton } from './submit-button';
 import { DialogClose } from "@/components/ui/dialog";
 import { ExternalLink } from "lucide-react";
+import { Button } from './ui/button';
 
 export function ContactForm() {
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -19,8 +20,11 @@ export function ContactForm() {
     if (formSubmitted) {
         return (
             <div className="text-center">
-                <h2 className="text-2xl font-semibold mb-4">Thank you!</h2>
-                <p className="text-muted-foreground">Your message has been sent successfully. I&apos;ll get back to you soon.</p>
+                <h2 className="text-2xl mb-4">Thank you!</h2>
+                <p className="text-muted-foreground mb-4">Your message has been sent successfully. I&apos;ll get back to you soon.</p>
+                <DialogClose asChild>
+                    <Button variant="outline">Take me back</Button>
+                </DialogClose>
             </div>
         );
     }

@@ -59,15 +59,15 @@ export default function Home() {
               <div className="mt-6">
                 <p className="text-muted-foreground/50 font-mono text-xs">Currently working with, but not limited to:</p>
                 <div className="grid grid-cols-9 gap-1.5 items-center mt-2">
-                  <ReactIcon className="w-6" />
-                  <NextJsIcon className="w-6" />
-                  <TailwindIcon className="w-6" />
-                  <RadixIcon className="w-6" />
-                  <PostgresIcon className="w-6" />
-                  <LaravelIcon className="w-6" />
-                  <VercelIcon className="w-6" />
-                  <SupabaseIcon className="w-6" />
-                  <CloudflareWorkersIcon className="w-6" />
+                  <ReactIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
+                  <NextJsIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
+                  <TailwindIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
+                  <RadixIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
+                  <PostgresIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
+                  <LaravelIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
+                  <VercelIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
+                  <SupabaseIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
+                  <CloudflareWorkersIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
                 </div>
               </div>
             </div>
