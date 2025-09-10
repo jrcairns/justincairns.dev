@@ -1,17 +1,9 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Inter, Titillium_Web } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react"
 
 import { cn } from "@/lib/utils";
-import "./globals.css";
-import Link from "next/link";
-import { ExternalLink } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
 import { Albert_Sans, Castoro } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
-const font = Titillium_Web({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-heading" });
+import "./globals.css";
 
 
 export const metadata: Metadata = {
@@ -23,13 +15,6 @@ export const metadata: Metadata = {
     description: 'Design engineer occasionally writing about the frontend ecosystem.',
     url: 'https://www.justincairns.dev',
     siteName: 'justincairns.dev',
-    // images: [
-    //   {
-    //     url: '/og.png',
-    //     width: 800,
-    //     height: 600,
-    //   },
-    // ],
     locale: 'en_US',
     type: 'website',
   },

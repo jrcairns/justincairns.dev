@@ -1,20 +1,11 @@
 
 // http://localhost:3000/
-import { CloudflareWorkersIcon } from "@/components/icons/cfw";
-import { LaravelIcon } from "@/components/icons/laravel";
-import { NextJsIcon } from "@/components/icons/nextjs";
-import { PostgresIcon } from "@/components/icons/postgres";
-import { RadixIcon } from "@/components/icons/radix";
-import { ReactIcon } from "@/components/icons/react";
-import { SupabaseIcon } from "@/components/icons/supabase";
-import { TailwindIcon } from "@/components/icons/tailwind";
-import { VercelIcon } from "@/components/icons/vercel";
+import { ContactForm } from '@/components/contact-form';
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 import { ComponentProps, PropsWithChildren } from "react";
-import { ContactForm } from '@/components/contact-form';
 
 function Line({ className, children, ...rest }: PropsWithChildren<ComponentProps<"div">>) {
   return (
@@ -50,7 +41,7 @@ export default function Home() {
         </span>
         <Dialog>
           <DialogTrigger asChild>
-            <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super outline outline-border outline-offset-1 active:scale-[0.98] transition-transform duration-200">Let&apos;s talk</Button>
+            <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super outline outline-[0.5px] outline-border outline-offset-[0.5px]">Let&apos;s talk</Button>
           </DialogTrigger>
           <DialogContent className="bg-muted/80 border-none backdrop-blur-xl duration-0 translate-x-0 translate-y-0 top-0 left-0 h-full w-full max-w-none sm:rounded-none flex items-center justify-center">
             <svg className="absolute top-0 left-0" width="100%" height="24px" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-75" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[--pattern-color]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[--pattern-color]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-75)"></rect></svg>
@@ -150,8 +141,6 @@ export default function Home() {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 translate-y-1 h-4 w-[1px] animate-opacity-in">
                   <div className="absolute top-0 left-0 h-full w-full bg-[#bfbfbf]"></div>
                 </div>
-                {/* <div className="relative z-10 -left-1 flex animate-opacity-in font-mono text-[#a6a6a6]">next.js</div> */}
-                {/* <div className="relative z-10 -left-1 top-4 flex animate-opacity-in font-mono text-[#a6a6a6]">react.js</div> */}
               </div>
               <div className="absolute top-1/2 left-1/3 md:left-1/2 transform -translate-y-1/2 h-[330px] w-[330px] flex items-center justify-center">
                 <div className="absolute top-0 left-0 h-full w-full bg-[#F2F2F2] rounded-full animate-wipe -rotate-45"></div>
@@ -169,10 +158,6 @@ export default function Home() {
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-[#a6a6a6] rounded-full"></div>
                     </div>
                   </div>
-                  {/* <div className="absolute top-full left-1/2 -translate-x-1/2 translate-y-1 h-4 w-[1px] animate-opacity-in">
-                    <div className="absolute top-0 left-0 h-full w-full bg-[#bfbfbf]"></div>
-                    <div className="absolute -bottom-3">KN0</div>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -185,10 +170,10 @@ export default function Home() {
         <span className="inline-block bg-background border px-3 py-2 rounded text-muted-foreground text-xs md:text-sm shadow-super">2018 &mdash; Present</span>
       </div>
 
-      <div className="relative ml-6 max-w-[600px] md:mx-auto mb-24 px-4 md:px-0 z-30 mt-2">
+      <div className="relative ml-6 max-w-[600px] md:mx-auto mb-12 px-4 md:px-0 z-30 mt-2">
         <div className="space-y-2">
           {jobs.map(job => (
-            <a key={job.company} href={job.url} target="_blank" className="group grid grid-cols-[70px_1fr] items-center gap-4 w-full px-4 py-3 mb-2 border rounded focus:outline-none bg-background overflow-hidden">
+            <a rel="noopener noreferrer" key={job.company} href={job.url} target="_blank" className="group grid grid-cols-[70px_1fr] items-center gap-4 w-full px-4 py-3 mb-2 border rounded focus:outline-none bg-background overflow-hidden">
               <div className="w-[70px] h-[70px] bg-background rounded-[1px] shadow-logo flex items-center justify-center">
                 <div className="relative w-6 h-6">
                   {job.bg}
@@ -223,55 +208,7 @@ export default function Home() {
         <Line className="left-1 md:-left-6">HST</Line>
       </div>
 
-      <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0">
-        <h2 className="text-2xl mb-4">About me</h2>
-        <p className="mb-4 leading-7 text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatem officia mollitia maiores hic sit, eum ratione quod. Impedit, illo fuga sunt labore expedita ut! Eaque, aliquam accusantium odit aperiam minus sunt nesciunt? Vero ullam, sequi accusantium aliquid doloribus architecto.</p>
-        <p className="mb-4 leading-7 text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum saepe vero consequatur odio eos qui possimus nesciunt quas expedita voluptas?</p>
-        <Line className="left-1 md:-left-6">ABT</Line>
-      </div>
-
-      <div className="relative max-w-[600px] md:mx-auto -mt-8 -mb-4 pl-10 pr-4 md:px-0 ">
-        <div className="pt-12 pb-16">
-          <a href="/">
-            <blockquote className="leading-7 bg-background border rounded overflow-hidden shadow-super">
-              <svg className="opacity-75" width="100%" height="24px" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id="pattern-75" patternUnits="userSpaceOnUse" width="4" height="4">
-                    <g clip-path="url(#clip0)">
-                      <path d="M1 -1L5 3" stroke-width="0.5"></path>
-                      <path d="M-1 1L3 5" stroke-width="0.5"></path>
-                    </g>
-                  </pattern>
-                  <clipPath id="clip0">
-                    <rect width="4" height="4" fill="white"></rect>
-                  </clipPath>
-                </defs>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-75)"></rect>
-              </svg>
-              <div className="pt-6 pb-8 px-10 md:py-12 md:px-14">
-                <p className="relative text-lg mb-3 [font-family:var(--font-heading)]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, id?</p>
-                <p className="relative text-lg mb-4 [font-family:var(--font-heading)]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut laudantium inventore repudiandae odit minus placeat explicabo.</p>
-                <footer className="flex items-center gap-3 text-sm mt-10">
-                  <img src="/1611002298561.jpeg" alt="" className="w-10 h-10 rounded-full" />
-                  <div>
-                    <div className="mr-2 text-foreground/80">Lorem, ipsum.</div>
-                    <div className="text-foreground/50">Dolor sit.</div>
-                  </div>
-                  <div className="ml-auto mr-2">
-                    <div className="relative h-6 w-6">
-                      <img src="https://pssbvzyatajutwslvzgk.supabase.co/storage/v1/object/public/logos/vercel.svg" alt="" className="absolute top-0 left blur-lg opacity-50" />
-                      <img src="https://pssbvzyatajutwslvzgk.supabase.co/storage/v1/object/public/logos/vercel.svg" alt="" className="absolute top-0 left-0" />
-                    </div>
-                  </div>
-                </footer>
-              </div>
-            </blockquote>
-          </a>
-          <Line className="left-5 md:-left-8">REC</Line>
-        </div>
-      </div>
-
-      <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 mb-8">
+      <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 mb-12">
         <h2 className="text-2xl mb-4">Connect with me</h2>
         <ul className="list-inside list-disc space-y-2">
           <li>
@@ -295,22 +232,7 @@ export default function Home() {
       </div>
 
       <footer>
-        <div className="relative mb-20 ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 items-center justify-between">
-          <div>
-            <span className="block [font-family:var(--font-heading)]">
-              <div className="text-3xl md:text-4xl leading-none md:leading-none font-light" style={{ textRendering: "optimizeLegibility" }}>Justin</div>
-              <div className="relative -left-1 inline-block text-3xl md:text-4xl text-light leading-none md:leading-none font-light">Cairns
-                <div className="absolute top-0 -right-3 font-mono text-[8px] md:text-[9px] text-muted-foreground">
-                  DEV
-                </div>
-              </div>
-            </span>
-            <p className="mt-2 text-muted-foreground max-w-80">Design engineer</p>
-          </div>
-          <Line className="left-1 md:-left-6">FOT</Line>
-        </div>
-
-        <div className="flex h-24">
+        <div className="flex h-12">
           <div className="w-1/2 opacity-50">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-50" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[#a6a6a6]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[#a6a6a6]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-50)"></rect>
             </svg>
