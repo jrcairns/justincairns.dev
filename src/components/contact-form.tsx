@@ -31,8 +31,8 @@ export function ContactForm() {
 
     return (
         <div>
-            <p className="font-semibold mb-1">Send me a message</p>
-            <p className="mb-4 text-muted-foreground">Leave your information below, and I&apos;ll follow up shortly. Reach out directly on <a className="inline-flex underline hover:text-foreground transition-colors" href="https://www.linkedin.com/in/justin-cairns-9ba580177/" target="_blank">Linkedin <ExternalLink className="h-3 w-3 ml-px" /></a> or <a href="https://x.com/_justincairns" target="_blank" className="inline-flex underline hover:text-foreground transition-colors">X <ExternalLink className="ml-px h-3 w-3" /></a> for a quicker response.</p>
+            <h4 className="font-semibold mb-1 text-base">Send me a message</h4>
+            <p className="mb-4 text-muted-foreground">Leave your information below, and I&apos;ll follow up shortly. Reach out directly on <a href="https://x.com/itworkslocally" target="_blank" className="inline-flex underline hover:text-foreground transition-colors">X <ExternalLink className="ml-px h-3 w-3" /></a> for a quicker response.</p>
             <ul className="pl-3.5 mb-4 list-disc text-muted-foreground space-y-2 text-sm">
                 <li>Full-time & contract positions</li>
                 <li>Short-term freelance <div className="text-xs text-muted-foreground inline text-nowrap truncate bg-border/50 border px-1.5 py-0.5 leading-none rounded-[8px] md:rounded-[10px]">40hr+</div></li>

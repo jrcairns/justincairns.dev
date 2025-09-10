@@ -50,26 +50,12 @@ export default function Home() {
         </span>
         <Dialog>
           <DialogTrigger asChild>
-            <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super">Let&apos;s talk</Button>
+            <Button className="relative z-10 inline-block px-3 py-2 mb-2 border rounded text-xs md:text-sm shadow-super outline outline-border outline-offset-1 active:scale-[0.98] transition-transform duration-200">Let&apos;s talk</Button>
           </DialogTrigger>
           <DialogContent className="bg-muted/80 border-none backdrop-blur-xl duration-0 translate-x-0 translate-y-0 top-0 left-0 h-full w-full max-w-none sm:rounded-none flex items-center justify-center">
             <svg className="absolute top-0 left-0" width="100%" height="24px" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-75" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[--pattern-color]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[--pattern-color]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-75)"></rect></svg>
             <div className="max-w-xs w-full">
               <ContactForm />
-              <div className="mt-6">
-                <p className="text-muted-foreground/50 font-mono text-xs">Currently working with, but not limited to:</p>
-                <div className="grid grid-cols-9 gap-1.5 items-center mt-2">
-                  <ReactIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                  <NextJsIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                  <TailwindIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                  <RadixIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                  <PostgresIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                  <LaravelIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                  <VercelIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                  <SupabaseIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                  <CloudflareWorkersIcon className="w-6 icon-grayscale hover:icon-grayscale-none" />
-                </div>
-              </div>
             </div>
           </DialogContent>
         </Dialog>
@@ -286,17 +272,6 @@ export default function Home() {
       </div>
 
       <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 mb-8">
-        <h2 className="text-2xl mb-4">Writing</h2>
-        <div className="text-muted-foreground">
-          <p className="mb-4 leading-7">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-          <p className="mb-4 leading-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. In fugit atque dolor est consequuntur alias odio tempore porro mollitia nihil.</p>
-          <p className="mb-4 leading-7">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ipsam tempora deleniti corporis ratione itaque non deserunt. Rerum.</p>
-          <p className="mb-4 leading-7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem odio esse vitae non. Id sequi aperiam temporibus cum error quae inventore reprehenderit hic beatae doloremque, alias soluta nostrum, expedita nam labore. Temporibus mollitia dolore corporis!</p>
-        </div>
-        <Line className="left-1 md:-left-6">WRI</Line>
-      </div>
-
-      <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 mb-20">
         <h2 className="text-2xl mb-4">Connect with me</h2>
         <ul className="list-inside list-disc space-y-2">
           <li>
@@ -308,17 +283,9 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/_justincairns" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://x.com/itworkslocally" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
               <span className="underline inline-flex items-center">
-                https://twitter.com/_justincairns
-                <ExternalLink className="h-3 w-3 ml-1" />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/justin-cairns-9ba580177/" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">
-              <span className="underline inline-flex items-center">
-                https://www.linkedin.com/in/justin-cairns-9ba580177/
+                https://x.com/itworkslocally
                 <ExternalLink className="h-3 w-3 ml-1" />
               </span>
             </a>
@@ -328,7 +295,7 @@ export default function Home() {
       </div>
 
       <footer>
-        <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 items-center justify-between">
+        <div className="relative mb-20 ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 items-center justify-between">
           <div>
             <span className="block [font-family:var(--font-heading)]">
               <div className="text-3xl md:text-4xl leading-none md:leading-none font-light" style={{ textRendering: "optimizeLegibility" }}>Justin</div>
@@ -342,13 +309,7 @@ export default function Home() {
           </div>
           <Line className="left-1 md:-left-6">FOT</Line>
         </div>
-        <div className="relative ml-6 max-w-[600px] md:mx-auto pl-6 pr-4 md:px-0 items-center justify-between mt-8 mb-20">
-          <div className="text-sm md:text-base text-foreground">© Copyright</div>
-          <div className="flex gap-1 mt-1 text-muted-foreground">
-            <div className="text-xs md:text-sm bg-muted border px-2 pt-[3px] pb-[2px] md:py-[2px] leading-none rounded-[8px] md:rounded-[10px]">{new Date().getFullYear()}</div>
-          </div>
-          <Line className="left-1 md:-left-6">COP</Line>
-        </div>
+
         <div className="flex h-24">
           <div className="w-1/2 opacity-50">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pattern-50" patternUnits="userSpaceOnUse" width="4" height="4"><g clip-path="url(#clip0)"><path d="M1 -1L5 3" className="stroke-[#a6a6a6]" stroke-width="0.5"></path><path d="M-1 1L3 5" className="stroke-[#a6a6a6]" stroke-width="0.5"></path></g></pattern><clipPath id="clip0"><rect width="4" height="4" fill="white"></rect></clipPath></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-50)"></rect>
@@ -359,16 +320,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      <form className="fixed bottom-2 md:bottom-5 flex justify-center w-full z-30">
-        <label className="bg-background/80 backdrop-blur-md rounded relative w-full mx-2 md:w-[620px] animate-wipe-up" htmlFor="subscribe">
-          <div className="absolute w-full h-full rounded shadow-email animate-delay-opacity pointer-events-none"></div>
-          <input id="subscribe" type="email" placeholder="justin@example.com" className="bg-transparent border w-full h-14 px-6 py-2 text-sm md:text-base rounded focus:outline-none focus:ring-1 focus:ring-foreground placeholder:text-muted-foreground/50" name="subscribe" />
-          <Button className="absolute top-1/2 right-2 -translate-y-1/2 border shadow-super">
-            Subscribe
-          </Button>
-        </label>
-      </form>
     </div>
   );
 }
@@ -376,11 +327,21 @@ export default function Home() {
 
 const jobs = [
   {
+    company: "Dejen",
+    title: "Founding Engineer",
+    location: "Miami, US",
+    startDate: "2024",
+    endDate: "Present",
+    logoUrl: "/dejen.png",
+    url: "https://dejen.com",
+    bg: (<img className="absolute top-0 left-0 blur-lg opacity-25 md:group-hover:opacity-75 transition-opacity text-transparent" src="/dejen.png" />)
+  },
+  {
     company: "BetterHelp",
     title: "Senior Frontend Software Engineer",
     location: "Mountain View, US",
     startDate: "2022",
-    endDate: "Present",
+    endDate: "2024",
     logoUrl: "/bh.jpeg",
     url: "https://betterhelp.com",
     bg: (<img className="absolute top-0 left-0 blur-lg opacity-25 md:group-hover:opacity-75 transition-opacity text-transparent" src="/bh.jpeg" />)
